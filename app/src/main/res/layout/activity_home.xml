@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1F2937"
+    tools:context=".MainActivity">
+
+    <!-- Header -->
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:id="@+id/welcomeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hi, Welcome Back"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/goodMorningText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/welcomeText"
+            android:text="Have a good day !"
+            android:textColor="#10B981"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/userIcon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_user"
+            android:tint="#FFFFFF" />
+    </RelativeLayout>
+
+    <!-- Balance Card -->
+    <RelativeLayout
+        android:id="@+id/balanceCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        android:layout_margin="16dp"
+        android:background="@drawable/rounded_bg"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total Balance"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0 vnđ"
+                    android:textColor="#FFFFFF"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:orientation="vertical"
+                android:rotationY="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total Expense"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0 vnđ"
+                    android:textColor="#EF4444"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <!-- Goals Card -->
+    <RelativeLayout
+        android:id="@+id/goalsCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/balanceCard"
+        android:layout_margin="16dp"
+        android:background="#374151"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_piggy_bank"
+                    android:tint="#10B981" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Savings on Goals"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_utensils"
+                    android:tint="#6B7280" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Food Last Week"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:gravity="center" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00.00"
+                    android:textColor="#EF4444"
+                    android:textSize="14sp"
+                    android:gravity="center" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- Tabs -->
+    <LinearLayout
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/goalsCard"
+        android:layout_margin="16dp"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:gravity="center">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#374151"
+            android:text="Daily"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#374151"
+            android:text="Weekly"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#10B981"
+            android:text="Monthly"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+    <!-- Expenses List -->
+
+    <!-- Footer -->
+
+    <ListView
+        android:id="@+id/expensesListView"
+        android:layout_width="wrap_content"
+        android:layout_height="185dp"
+        android:layout_below="@id/tabs"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="#374151"
+        android:padding="16dp" />
+
+    <LinearLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:weightSum="5"
+        android:padding="16dp"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="28dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_home"
+            android:tint="#10B981" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="28dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_char"
+            android:tint="#9CA3AF" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="28dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_wallet"
+            android:tint="#9CA3AF" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="28dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_cog"
+            android:tint="#9CA3AF" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="28dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_user"
+            android:tint="#9CA3AF" />
+    </LinearLayout>
