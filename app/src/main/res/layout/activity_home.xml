@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#1F2937"
-    tools:context=".MainActivity">
+    tools:context=".HomeActivity">
 
     <!-- Header -->
     <RelativeLayout
@@ -21,14 +22,15 @@
             android:text="Hi, Welcome Back"
             android:textColor="#FFFFFF"
             android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
 
         <TextView
             android:id="@+id/goodMorningText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/welcomeText"
-            android:text="Have a good day !"
+            android:text="Have a good day!"
             android:textColor="#10B981"
             android:textSize="16sp" />
 
@@ -38,8 +40,8 @@
             android:layout_height="40dp"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
-            android:src="@drawable/ic_user"
-            android:tint="#FFFFFF" />
+            android:src="@drawable/ic_noti"
+            app:tint="#FFFFFF" />
     </RelativeLayout>
 
     <!-- Balance Card -->
@@ -85,8 +87,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="end"
-                android:orientation="vertical"
-                android:rotationY="1">
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -104,8 +105,6 @@
                     android:textStyle="bold" />
             </LinearLayout>
         </LinearLayout>
-
-
     </RelativeLayout>
 
     <!-- Goals Card -->
@@ -135,7 +134,8 @@
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:src="@drawable/ic_piggy_bank"
-                    android:tint="#10B981" />
+                    android:tint="#10B981"
+                    tools:ignore="UseAppTint" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -157,7 +157,8 @@
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:src="@drawable/ic_utensils"
-                    android:tint="#6B7280" />
+                    android:tint="#6B7280"
+                    tools:ignore="UseAppTint" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -211,17 +212,14 @@
             android:layout_weight="1"
             android:background="#10B981"
             android:text="Monthly"
-            android:textColor="#FFFFFF" />
+            android:textColor="#FFFFFF"/>
     </LinearLayout>
 
     <!-- Expenses List -->
-
-    <!-- Footer -->
-
     <ListView
         android:id="@+id/expensesListView"
         android:layout_width="wrap_content"
-        android:layout_height="185dp"
+        android:layout_height="187dp"
         android:layout_below="@id/tabs"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
@@ -232,6 +230,7 @@
         android:background="#374151"
         android:padding="16dp" />
 
+    <!-- Footer -->
     <LinearLayout
         android:id="@+id/footer"
         android:layout_width="match_parent"
@@ -243,37 +242,44 @@
         android:gravity="center">
 
         <ImageView
+            android:id="@+id/iconHome"
             android:layout_width="0dp"
             android:layout_height="28dp"
             android:layout_weight="1"
             android:src="@drawable/ic_home"
-            android:tint="#10B981" />
+            app:tint="#10B981" />
 
         <ImageView
+            android:id="@+id/iconChart"
             android:layout_width="0dp"
             android:layout_height="28dp"
             android:layout_weight="1"
             android:src="@drawable/ic_char"
-            android:tint="#9CA3AF" />
+            app:tint="#9CA3AF" />
 
         <ImageView
+            android:id="@+id/iconWallet"
             android:layout_width="0dp"
             android:layout_height="28dp"
             android:layout_weight="1"
             android:src="@drawable/ic_wallet"
-            android:tint="#9CA3AF" />
+            android:tint="#9CA3AF"
+            tools:ignore="UseAppTint" />
 
         <ImageView
+            android:id="@+id/iconSettings"
             android:layout_width="0dp"
             android:layout_height="28dp"
             android:layout_weight="1"
             android:src="@drawable/ic_cog"
-            android:tint="#9CA3AF" />
+            app:tint="#9CA3AF" />
 
         <ImageView
+            android:id="@+id/iconUser"
             android:layout_width="0dp"
             android:layout_height="28dp"
             android:layout_weight="1"
             android:src="@drawable/ic_user"
-            android:tint="#9CA3AF" />
+            app:tint="#9CA3AF" />
     </LinearLayout>
+</RelativeLayout>
